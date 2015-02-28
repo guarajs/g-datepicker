@@ -14,6 +14,7 @@
   ],
   "dependencies": {
     "guara": "master",
+	"moment": "~2.8.0",
     "eonasdan-bootstrap-datetimepicker": "~4.0.0"
   }
 }

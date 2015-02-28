@@ -1,11 +1,33 @@
 <script src="../moment/moment.js"></script>
+<script src="../jquery/dist/jquery.min.js"></script>
+<script src="../bootstrap/dist/js/bootstrap.min.js"></script>
+<scritpt src="../eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.min.js"></script>
 
 <polymer-element name="g-datepicker" attributes="">
 	<template>
 		<link rel="stylesheet" href="g-datepicker.css">
-		<span>Date Picker</span>
+		<div class="container">
+			<div class="row">
+				<div class='col-sm-6'>
+				    <div class="form-group">
+				        <div id="datetimepicker" class="input-group date">
+				            <input type='text' class="form-control" />
+				            <span class="input-group-addon">
+								<span class="glyphicon glyphicon-calendar"></span>
+				            </span>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
 	</template>
 	<script>
-    	Polymer('g-datepicker', {});
+    	Polymer('g-datepicker', {
+			attached: function() {
+				var el = this.$.datetimepicker;
+				console.log($(el));
+				//$(el).datetimepicker();
+			},
+		});
 	</script>
 </polymer-element>
